@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lesson4_LabB.MainPage"
+             Title="HAPPINESS JOURNAL">
+
+    <StackLayout BackgroundColor="MintCream">
+        <Frame Style="{StaticResource FrameStyle}">
+            <Label 
+               Text="HOW ARE YOU TODAY?"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        </Frame>
+        <Label Text="NAME"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Entry Placeholder="Name"/>
+        <Label Text="PASSWORD"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Entry Placeholder="Password"
+               IsPassword="True"/>
+        <Button Text="LOGIN"
+                x:Name="NextPageBtn"
+                Clicked="ToNextPage"
+                BackgroundColor="LightGreen"/>
+    </StackLayout>
+</ContentPage>

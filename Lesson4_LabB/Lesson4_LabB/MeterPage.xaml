@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lesson4_LabB.MeterPage"
+             Title="HOW ARE YOU FEELING TODAY?">
+
+    <StackLayout>
+        <Frame Style="{StaticResource FrameStyle}">
+        <Label Text="TODAYS HAPPINESS"
+               BindingContext="{x:Reference Name=slider}"
+               FontAttributes="Bold"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        </Frame>
+        <Slider x:Name="slider"
+                Maximum="100"
+                VerticalOptions="CenterAndExpand" />
+
+        <Label BindingContext="{x:Reference slider}"
+               Text="{Binding Value, StringFormat='Your happy meter is {0:F0} today!'}"
+               FontAttributes="Bold"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <Label Text="JOURNAL"
+               x:Name="theJournal"/>
+        <Editor Placeholder="TELL ME WHY"
+                x:Name="theWhy"
+                VerticalOptions="CenterAndExpand"
+                AutoSize="TextChanges"/>
+        <Button Clicked="Button_Clicked"
+                Text="POST TO JOURNAL"
+                Style="{StaticResource ButtonStyle}"/>
+    </StackLayout>
+</ContentPage>
