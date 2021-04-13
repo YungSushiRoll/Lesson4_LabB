@@ -26,7 +26,8 @@
                VerticalOptions="Center" />
         <Entry Placeholder="Password"
                IsPassword="True"/>
-        <Button Text="LOGIN"
+        <!-- Does not actually take a Name and Password -->
+        <Button Text="LOGIN &#x0a; (Does not actually require a name and password to log in)"
                 x:Name="NextPageBtn"
                 Clicked="ToNextPage"
                 BackgroundColor="LightGreen"/>
